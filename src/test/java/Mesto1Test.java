@@ -1,16 +1,16 @@
 import io.qameta.allure.Description;
-        import io.qameta.allure.Step;
-        import io.qameta.allure.junit4.DisplayName;
-        import io.restassured.RestAssured;
-        import org.junit.Before;
-        import org.junit.Test;
+import io.qameta.allure.Step;
+import io.qameta.allure.junit4.DisplayName;
+import io.restassured.RestAssured;
+import org.junit.Before;
+import org.junit.Test;
 
-        import static io.restassured.RestAssured.given;
-        import static org.hamcrest.Matchers.equalTo;
+import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.equalTo;
 
 public class Mesto1Test {
 
-    String bearerToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc3NTVkN2Y5NzNhOTAwM2QyZWI3ZmQiLCJpYXQiOjE3MDcwNTQ2MzIsImV4cCI6MTcwNzY1OTQzMn0.Mk9NU51s8MNM_mgEuAimb6rQCAETCCrrZ1WZASWFIHM";
+    String bearerToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc3NTVkN2Y5NzNhOTAwM2QyZWI3ZmQiLCJpYXQiOjE3MDc5NDEzOTgsImV4cCI6MTcwODU0NjE5OH0.7Z862O4pcyRLYjUfvD4-SUqOzeNHaEqAlcbzMRBn_uI";
 
     @Before
     public void setUp() {
@@ -34,7 +34,6 @@ public class Mesto1Test {
     @Description("This test is for liking the first photo on Mesto.")
     public void likeTheFirstPhoto() {
         String photoId = getTheFirstPhotoId();
-
         likePhotoById(photoId);
         deleteLikePhotoById(photoId);
     }
